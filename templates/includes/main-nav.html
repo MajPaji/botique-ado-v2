@@ -10,9 +10,9 @@
             All Products
           </a>
           <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-            <a class="dropdown-item" href="#">By Price</a>
-            <a class="dropdown-item" href="#">By Rating</a>
-            <a class="dropdown-item" href="#">By Category</a>
+            <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">By Price</a>
+            <a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc">By Rating</a>
+            <a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=asc">By Category</a>
             <a class="dropdown-item" href="{% url 'products' %}">All products</a>            
           </div>
         </li>
@@ -25,7 +25,7 @@
             <a class="dropdown-item" href="">By Price</a>
             <a class="dropdown-item" href="">By Rating</a>
             <a class="dropdown-item" href="">By Category</a>
-            <a class="dropdown-item" href="{% url 'products' %}">All products</a>            
+            <a class="dropdown-item" href="{% url 'products' %}?category=activewear,essentials,jeans,shirts,bed_bath,clearance,deals,kitchen_dining">All products</a>            
           </div>
         </li>
 
@@ -37,7 +37,7 @@
             <a class="dropdown-item" href="{% url 'products' %}?category=activewear, essentials">Activewear &amp; Essentials </a>
             <a class="dropdown-item" href="{% url 'products' %}?category=jeans">Jeans</a>
             <a class="dropdown-item" href="{% url 'products' %}?category=shirts">Shirts</a>
-            <a class="dropdown-item" href="{% url 'products' %}?category=activewear, essentials, jeans, shirts">All Clothings</a>            
+            <a class="dropdown-item" href="{% url 'products' %}?category=activewear,essentials,jeans,shirts">All Clothings</a>            
           </div>
         </li>
 
