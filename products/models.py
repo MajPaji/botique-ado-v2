@@ -24,6 +24,7 @@ class Product(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
+    has_sizes = models.BooleanField(default=False, blank=True, null=True)
     rating = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True)
     image_url = models.URLField(max_length=1024, blank=True, null=True)
     image = models.ImageField(blank=True, null=True)
@@ -31,4 +32,4 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
-    
+

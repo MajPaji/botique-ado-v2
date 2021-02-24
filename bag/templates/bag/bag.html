@@ -22,6 +22,9 @@
         </div>
         <div class="row">
             <div class="col">
+                {{ bag_items }}
+                <hr>
+                {{ request.session.bag }}
                {% if bag_items %}
                     <div class="table-responsive rounded">
                         <table class="table table-sm table-borderless">
